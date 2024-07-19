@@ -9,11 +9,6 @@ const router = createBrowserRouter(
     <>
       <Route path='/' element={ <App /> } />
       <Route path='/postulation' element={ <Postulation /> } />
-      <Route path='/applicants' element={ <ApplicantsPage /> } />
-      <Route path='/professions' element={ <ProfessionsPage /> } />
-      <Route path='/professions/:professionId' element={ <ProfessionDetailPage /> } />
-      <Route path='/applicants/:applicantId' element={ <ApplicantDetailPage /> } />
-      <Route path='*' element={ <NotFound /> } />
     </>
   )
 )
