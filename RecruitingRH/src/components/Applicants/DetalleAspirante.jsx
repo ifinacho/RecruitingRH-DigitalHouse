@@ -18,7 +18,7 @@ export const DetalleAspirante = () => {
         <div className='card'>
             <article className='aspirante__article'>
                 <h1 className="card-title">{aspirante.nombre} {aspirante.apellido}</h1>
-                <img className="card-img-top" src={`http://localhost:3000/image/aspirantes/${aspirante.imagen}`} alt='Aspirante' />
+                <img className="card-img-top" src={aspirante.imagenURL} alt='Aspirante' style={{ width: 20 + "rem" ,borderRadius: "100%"}} />
                 <div className="card-body">
                     <p className="card-text"><b>DNI:</b> {aspirante.dni}</p >
                     <p className="card-text"><b>Email:</b> {aspirante.email}</p >

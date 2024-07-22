@@ -9,13 +9,19 @@ const aspirantesAPIController = {
                 include: ['profesiones', 'sexos'],
             })
                 .then((aspirantes) => {
+                    let result = aspirantes.map(aspirante => {
+                        return {
+                            ...aspirante.dataValues, // Copia todas las propiedades existentes
+                            imagenURL: `http://localhost:3000/images/aspirantes/${aspirante.imagen}` // Agrega una nueva propiedad
+                        };
+                    });
                     let respuesta = {
                         meta: {
                             status: 200,
-                            count: aspirantes.length,
+                            count: result.length,
                             url: 'http://localhost:3000/api/aspirantes'
                         },
-                        data: aspirantes
+                        data: result
                     }
                     res.json(respuesta);
                 })
@@ -31,6 +37,7 @@ const aspirantesAPIController = {
                 }
             )
                 .then(aspirante => {
+                    aspirante.dataValues.imagenURL = `http://localhost:3000/images/aspirantes/${aspirante.imagen}`
                     let respuesta = {
                         meta: {
                             status: 200,
