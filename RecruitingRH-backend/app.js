@@ -10,7 +10,6 @@ app.listen(3000, () => {
     console.log('Servidor corriendo en el puerto 3000...');
 });
 
-app.use(cors());
 
 //Aquí llamo a la ruta de las apis
 const apiAspirantesRouter = require('./routes/api/aspirantes')
