@@ -34,7 +34,7 @@ const aspirantesAPIController = {
                     let respuesta = {
                         meta: {
                             status: 200,
-                            url: `http://localhost:3000/api/aspirantes/${aspirante.id}`
+                            url: `http://localhost:3000/api/aspirantes/${req.params.id}`
                         },
                         data: aspirante
                     }

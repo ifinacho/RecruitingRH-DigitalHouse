@@ -59,9 +59,10 @@ export const Aspirantes = () => {
                                     {/* <td><img src={`http://localhost:3000/images/applicants/${aspirante.imagen}`} alt='Aspirante' style={{ width: '50px' }}/></td> */}
                                     <td>{aspirante.profesiones?.nombre}</td>
                                     <td>{aspirante.sexos?.nombre}</td>
-                                    {/* <td className='td__actions'>
-                                        <button onClick={() => handleDelete(aspirante.id)}>Eliminar</button>
-                                    </td> */}
+                                     <td className='td__actions'>
+                                        <a className='button button--primary' href={`/applicants/${aspirante.id}`}>Ver</a>
+                                        {/*<button onClick={() => handleDelete(aspirante.id)}>Eliminar</button>*/}
+                                    </td> 
                                 </tr>
                             ))}
                         </tbody>
