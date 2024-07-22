@@ -6,9 +6,11 @@ const app = express();
 const db = require("./database/models");
 app.use(cors());
 
-app.listen(3000, () =>{
+app.listen(3000, () => {
     console.log('Servidor corriendo en el puerto 3000...');
 });
+
+app.use(cors());
 
 //Aquí llamo a la ruta de las apis
 const apiAspirantesRouter = require('./routes/api/aspirantes')
@@ -16,6 +18,6 @@ const apiProfesionesRouter = require('./routes/api/profesiones')
 const apiSexosRouter = require('./routes/api/sexos')
 
 //Aquí creo la colección de mis recursos (APIs)
-app.use('/api/aspirantes',apiAspirantesRouter);
-app.use('/api/profesiones',apiProfesionesRouter);
-app.use('/api/sexos',apiSexosRouter);
+app.use('/api/aspirantes', apiAspirantesRouter);
+app.use('/api/profesiones', apiProfesionesRouter);
+app.use('/api/sexos', apiSexosRouter);
