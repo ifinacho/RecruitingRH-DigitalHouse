@@ -1,9 +1,10 @@
 const express = require('express');
 const path = require('path');
-
+const cors = require('cors');
 const app = express();
 
 const db = require("./database/models");
+app.use(cors());
 
 app.listen(3000, () =>{
     console.log('Servidor corriendo en el puerto 3000...');
