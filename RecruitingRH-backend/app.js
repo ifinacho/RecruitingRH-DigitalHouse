@@ -4,6 +4,10 @@ const cors = require('cors');
 const app = express();
 
 const db = require("./database/models");
+
+const publicPath =  path.resolve(__dirname, './public'); 
+app.use( express.static(publicPath) );
+
 app.use(cors());
 
 app.listen(3000, () => {
