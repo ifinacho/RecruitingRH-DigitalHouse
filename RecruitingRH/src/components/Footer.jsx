@@ -69,7 +69,7 @@ export function Footer() {
             </div>
             <div className="text-center p-3 border-top d-flex flex-wrap justify-content-around align-items-center" style={{backgroundColor: "rgba(0, 0, 0, 0.05);"}}>
                 <Link className="text-body" to="https://www.digitalhouse.com/ar">
-                    <img src={logoDH} alt="" style={{height: "40px", width: "120px", backgroundColor: "black", padding:"0 10px"}}></img>
+                    <img src={logoDH} alt="" style={{height: "100px", width: "180px",  padding:"0 10px"}}></img>
                 </Link>
             </div>
         </footer>
