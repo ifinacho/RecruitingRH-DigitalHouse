@@ -45,8 +45,6 @@ function Professions() {
                         )}
                     </div>
                 </div>
-
-
             </main >
         </div >
     );

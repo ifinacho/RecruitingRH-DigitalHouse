@@ -30,7 +30,7 @@ function ListProfessions() {
             {
                 professions.map(profession =>
                     <li className='list-professions'>
-                        <Link to={"#"}>{profession.nombre}</Link>
+                        <Link to={"/professions/" + profession.nombre}>{profession.nombre}</Link>
                     </li>
                 )
             }
