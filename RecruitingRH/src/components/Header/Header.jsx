@@ -5,6 +5,7 @@ import '../../assets/css/Header.css';
 import { Navbar } from './Navbar';
 import { Link } from 'react-router-dom';
 import ListProfessions from './ListProfessions';
+import { Search } from '../Search';
 
 
 const showProfessions = () => {
@@ -51,6 +52,31 @@ export function Header() {
                     </section>
                 </nav>
             </header>
+            {/* inicio menu mobile */}
+            <div className="accordion accordion-flush" id="accordionFlushExample">
+                <div className="accordion-item">
+                    <h2 className="accordion-header">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Opciones
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div className="accordion-body">
+                            <Link to={"/applicants"} className='text-decoration-none' >
+                                <Navbar icon={faUser} title={" Aspirantes"} />
+                            </Link>
+                            <Link to={"/professions"} className='text-decoration-none'>
+                                <Navbar icon={faAddressCard} title={" Profesiones"} />
+                            </Link>
+                            <Link to={"/postulation"} className='text-decoration-none'>
+                                <Navbar icon={faList} title={" Postularse"} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <Search />
+            </div>
+            {/* fin menu mobile */}
         </>
     );
 }

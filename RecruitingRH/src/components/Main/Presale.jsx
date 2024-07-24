@@ -6,10 +6,10 @@ export function Presale() {
         <>
             {/* <!--Preventa--> */}
             <div className="preventa">
-                <h2>Búsqueda y reclutamiento</h2>
+                <h3>Búsqueda y reclutamiento</h3>
                 <p className="text-center h5">Encuentra el talento que necesitas para tu empresa o negocio, en todos los cargos administrativos, profesionales y técnicos.</p>
                 <div>
-                    {/* <img src={banner} alt="Recursos Humanos"></img> */}
+                    <img src={banner} alt="Recursos Humanos"></img>
                 </div>
             </div>
             {/* <!--Fin Preventa--> */}

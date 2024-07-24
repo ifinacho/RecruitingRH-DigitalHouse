@@ -14,22 +14,12 @@ function ListProfessions() {
             .catch(error => console.error(error))
     }, [])
 
-    // componente actualizado
-    // useEffect(() => {
-    // console.log('professions actualizado');
-    // }, [professions])
-
-    // componente desmontado
-    // useEffect(() => {
-    // return () => console.log('professions desmontado');
-    // }, [])
-
 
     return (
         <>
             {
-                professions.map(profession =>
-                    <li className='list-professions'>
+                professions.map((profession, i) =>
+                    <li className='list-professions' key={profession.nombre + i}>
                         <Link to={"/professions/" + profession.nombre}>{profession.nombre}</Link>
                     </li>
                 )
