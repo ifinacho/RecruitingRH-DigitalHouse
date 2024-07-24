@@ -4,7 +4,7 @@ import App from './App.jsx'
 import Postulation from './pages/Postulation.jsx'
 import Applicants from './pages/Applicants.jsx'
 import DetalleAspirante from './components/Applicants/DetalleAspirante.jsx'
-import Professions from './pages/Professions.jsx'
+import Professions from './components/Main/Professions.jsx'
 import ApplicantsFilter from './pages/ApplicantsFilter.jsx'
 
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom'

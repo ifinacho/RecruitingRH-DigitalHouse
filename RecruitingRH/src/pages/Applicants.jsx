@@ -6,15 +6,15 @@ import Aspirantes from '../components/Applicants/Aspirantes'
 import { Footer } from '../components/Footer';
 
 function Applicants() {
-    return(
+    return (
         <div className='dashboard'>
-        <Header/>
-        <Search/>
-        {/*<!-- Aspirantes -->*/}
-        <main className='content-wrap'>
-            <Aspirantes/>
-            <Footer/>
-        </main>
+            <Header />
+            <Search />
+            {/*<!-- Aspirantes -->*/}
+            {/* <main className='content-wrap'> */}
+            <Aspirantes />
+            {/* <Footer/>
+        </main> */}
         </div>
     );
 }

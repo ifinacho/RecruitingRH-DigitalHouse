@@ -29,7 +29,7 @@ export function Applicants() {
                             <Person
                                 key={applicant.id}  // Mejor usar id como key
                                 id={applicant.id}
-                                imagen={applicant.imagen}
+                                imagen={applicant.imagenURL}
                                 nombre={applicant.nombre}
                                 apellido={applicant.apellido}
                                 profesion={applicant.profesiones ? applicant.profesiones.nombre : "Sin profesión"} // Asegúrate de manejar la ausencia de profesión
