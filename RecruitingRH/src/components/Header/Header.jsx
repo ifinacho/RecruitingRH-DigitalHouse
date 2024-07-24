@@ -39,12 +39,15 @@ export function Header() {
                             <Link to={"/applicants"} className='text-decoration-none'>
                                 <Navbar icon={faUser} title={" Aspirantes"} />
                             </Link>
-                            <Link className='text-decoration-none' onClick={showProfessions}>
+                            <Link className='text-decoration-none dropdown-list-professions' onClick={showProfessions}>
                                 <Navbar icon={faAddressCard} title={" Profesiones"} /> {/* Corrección aquí */}
                             </Link>
                             <div className='list-professions ms-4'>
                                 <ListProfessions />
                             </div>
+                            <Link to={"/professions"} className='text-decoration-none list-professions-mobile'>
+                                <Navbar icon={faAddressCard} title={" Profesiones"} />
+                            </Link>
                             <Link to={"/postulation"} className='text-decoration-none'>
                                 <Navbar icon={faList} title={" Postularse"} />
                             </Link>

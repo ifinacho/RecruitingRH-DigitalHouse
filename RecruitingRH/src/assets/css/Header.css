@@ -6,6 +6,10 @@
     display: none;
 }
 
+.list-professions-mobile {
+    display: none;
+}
+
 @media (max-width: 440px) {
     .accordion {
         display: block;
@@ -34,5 +38,15 @@
         margin-bottom: 15px;
         padding-bottom: 10px;
         border-bottom: 0.5px rgb(13 110 253) solid;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown-list-professions {
+        display: none;
+    }
+
+    .list-professions-mobile {
+        display: block;
     }
 }
