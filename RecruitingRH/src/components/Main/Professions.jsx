@@ -30,7 +30,6 @@ export function  Professions () {
                             <thead>
                                 <tr>
                                 <th scope="col" className="text-center">Profesión</th>
-                                <th scope="col" className="text-center">Aspirantes</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,8 +37,8 @@ export function  Professions () {
                                 Array.isArray(professions) && professions.map((profession, i) => 
                                 <>
                                             <tr>
-                                            <td className="text-center"><Link to={`/professions/${profession.id}`} key={profession.name + i} className="text-decoration-none">{profession.name}</Link></td>
-                                            <td className="text-center">{profession.totalApplicants}</td>
+                                            <td className="text-center"><Link to={`/profesiones/${profession.id}`} key={profession.nombre + i} className="text-decoration-none">{profession.nombre}</Link></td>
+                                            <td className="text-center">{profession.totalApplicants}</td> 
                                             </tr>
                                 </>
                                 )

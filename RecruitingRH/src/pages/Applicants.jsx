@@ -3,13 +3,18 @@ import '../style.css'
 import { Header } from '../components/Header/Header';
 import { Search } from '../components/Search';
 import Aspirantes from '../components/Applicants/Aspirantes'
+import { Footer } from '../components/Footer';
 
 function Applicants() {
     return(
         <div className='dashboard'>
         <Header/>
         <Search/>
-        <Aspirantes/>
+        {/*<!-- Aspirantes -->*/}
+        <main className='content-wrap'>
+            <Aspirantes/>
+            <Footer/>
+        </main>
         </div>
     );
 }

@@ -1,13 +1,16 @@
 import { Presale } from "./Presale";
+import { Professions } from "./Professions";
+import { Applicants } from "./Applicants/Applicants";
 import { Footer } from "../Footer";
 
 export function Main() {
-    console.log('Main component rendered');
     return (
         <>
             {/*<!--Sección contenido--> */}
             <main className="content-wrap">
                 <Presale />
+                <Professions />
+                <Applicants />
                 <Footer />
             </main>
             {/* <!--Fin Sección contenido--> */}
