@@ -15,7 +15,7 @@ export const DetalleAspirante = () => {
     }, [refresh]);
 
     return (
-        <div className='card'>
+        <div className='bg-body-tertiary text-center shadow border-top-0'  style={{backgroundColor: "rgba(0, 0, 0, 0.05);"}}>
             <article className='aspirante__article'>
                 <h1 className="card-title">{aspirante.nombre} {aspirante.apellido}</h1>
                 <img className="card-img-top" src={aspirante.imagenURL} alt='Aspirante' style={{ width: 20 + "rem" ,borderRadius: "100%"}} />
@@ -27,7 +27,7 @@ export const DetalleAspirante = () => {
                     <p className="card-text"><b>Fecha de Nacimiento:</b> {aspirante.fechaNacimiento}</p >
                     <p className="card-text"><b>Profesión:</b> {aspirante.profesiones?.nombre}</p >
                     <p className="card-text"><b>Sexo:</b> {aspirante.sexos?.nombre}</p >
-                    <a className='btn btn-primary' href={`/applicants`}>Volver</a>
+                    {/* <a className='btn btn-primary' href={`/applicants`}>Volver</a> */}
                 </div>
             </article>
         </div>

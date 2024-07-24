@@ -4,7 +4,7 @@ import { Header } from '../components/Header/Header';
 import { Search } from '../components/Search';
 import DetalleAspirante from '../components/Applicants/DetalleAspirante'
 
-function Applicants() {
+function ApplicantsDetail() {
     return(
         <div className='dashboard'>
         <Header/>
@@ -13,4 +13,4 @@ function Applicants() {
         </div>
     );
 }
-export default Applicants;
+export default ApplicantsDetail;

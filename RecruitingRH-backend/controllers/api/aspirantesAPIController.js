@@ -50,6 +50,41 @@ const aspirantesAPIController = {
         } catch (error) {
             console.log(error);
         }
+    },
+    create: async (req, res) => {
+        try {
+            const { nombre, apellido, dni, email, telefono, urlLinkedin, fechaNacimiento, profesionId, sexoId } = req.body;
+            const imagen = req.file ? req.file.filename : null;
+
+            // Validar que se recibieron los datos necesarios
+            if (!nombre || !apellido || !dni || !email || !telefono || !urlLinkedin || !fechaNacimiento || !profesionId || !sexoId) {
+                return res.status(400).json({ error: "Faltan datos requeridos." });
+            }
+
+            const nuevoAspirante = await db.Aspirante.create({
+                nombre,
+                apellido,
+                dni,
+                email,
+                telefono,
+                urlLinkedin,
+                fechaNacimiento,
+                imagen,
+                profesionId,
+                sexoId
+            });
+
+            res.status(201).json({
+                meta: {
+                    status: 201,
+                    url: `http://localhost:3000/api/aspirantes/${nuevoAspirante.id}`
+                },
+                data: nuevoAspirante
+            });
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ error: "Error al crear el aspirante." });
+        }
     }
 }
 
