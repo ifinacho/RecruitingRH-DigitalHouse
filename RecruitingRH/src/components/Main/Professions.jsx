@@ -41,7 +41,7 @@ function Professions() {
                                         Array.isArray(professions) && professions.map((profession, i) =>
                                             <>
                                                 <tr>
-                                                    <td className="text-center"><Link to={`/profesiones/${profession.id}`} key={profession.nombre + i} className="text-decoration-none">{profession.nombre}</Link></td>
+                                                    <td className="text-center"><Link to={"/professions/" + profession.nombre} key={profession.nombre + i} className="text-decoration-none">{profession.nombre}</Link></td>
                                                     {/* <td className="text-center">{profession.totalApplicants}</td> */}
                                                 </tr>
                                             </>
